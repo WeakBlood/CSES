@@ -1,3 +1,2 @@
 # MY-CSES-SOLUTIONS
-HIIIII, that's just a folder full of my c++ solutions of the famous problem set in CSES , if you notice any similarity with others code it's because i couldn't solved that problem by my own. Have a nice journey! 
-The repository is divided into directories that have the same name as in the problem set and i will try to give a personal explanation on each of the problem i solved, into the code or in a txt file in the same folder of the code. 
+HIII! This folder contains my C++ solutions to the famous problem set in CSES. If you notice any similarity with other codes, it's because I couldn't solve that problem on my own. Have a nice journey! The repository is organized into directories named after the problems in the set, and I will try to provide a personal explanation for each problem I've solved, either within the code or in a txt file located in the same folder as the code.

@@ -1,0 +1,3 @@
+The problem is at the very beginning of pattern matching in strings. We can solve it in O(N), where N equals the size of the string, 
+by using the fact that if there is a contiguous subsequence, then each character must always be equal to the previous one. 
+Remember to update the count to 1 and not to 0 because a single character is still a sequence of 1.

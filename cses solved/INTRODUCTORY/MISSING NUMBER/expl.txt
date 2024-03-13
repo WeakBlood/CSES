@@ -1,0 +1,7 @@
+This problem can be easily solved by utilizing the fact that only one number is missing. 
+This means that, after sorting the array, all the numbers must follow the rule "arr[i] = i". The first number that doesn't adhere to this rule will be identified as the missing number. This algorithm operates in O(NlogN) time complexity. 
+However, the worst-case scenario for the sorting process can be O(N^2) due to the nature of quicksort.
+In case you can want to keep the complexity always under O(N^2) you can substitute the sort function with a simple implementation of merge sort
+which operates in O(N log2N).
+​
+ 

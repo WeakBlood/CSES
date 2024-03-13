@@ -1,0 +1,5 @@
+A beautiful permutation can be built by simply noticing how the difference between adjacent elements 
+must be more than 1, using this fact, we exclude the numbers 2 and 3 because it is impossible to create such 
+permutations with them, then 1 simply outputs 1 cause it has no adjacent elements, in the end, with all other numbers
+just output all the numbers in intervals of 2 starting from 2 and then from 1.
+This has a complexity of O(N).

@@ -1,4 +1,0 @@
-For this problem, we have to remember that numbers can only be increased by 1 and not decreased, using this fact we can simply 
-confront the i-1 value starting from 1 with the i-th element and if we find that v[i] < v[i-1] then we must add to v[i] 
-the difference between v[i-1] and v[i] by doing so we ensure that the algorithm finds the minimum possible.
-This is done in linear time O(N).

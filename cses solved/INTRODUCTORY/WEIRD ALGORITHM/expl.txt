@@ -1,5 +1,0 @@
-The problem asked us to implement a simple simulation algorithm which we can easily solved using recursion
-by doing nothing more than translating the instructions into actual code, this algorithm takes linear 
-time O(L) where L is the amount of numbers that we need to go through starting by N and ending
-at 1. ( the time complexity cannot be based on N the size of N because the collatz conjecture can behave completely
-different on each number even if it follows the same rules ).

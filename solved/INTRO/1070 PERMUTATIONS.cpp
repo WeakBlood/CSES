@@ -14,7 +14,7 @@ using namespace std;
 //!!!EXPLANATION!!!:
 /* 
 This approach works because if we take x which is let's say even, x+1 is gonna be odd,
-this means that every sequence of odd numbers is gonna have at least an absolute difference of 2, 
+this means that every sequence of odd numbers is gonna have at least an absolute difference of 2 between adjiacent numbers, 
 we can just reduce the problem to "OUTPUT ALL EVEN NUMBERS FROM 2 TO N AND ALL ODD NUMBERS FROM 1 TO N"
 */
 

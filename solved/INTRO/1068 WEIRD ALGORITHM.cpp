@@ -1,4 +1,8 @@
-/* WeakBlood <3 */
+/*Sender:	WeakBlood
+Submission time:	2025-02-10 16:56:38 +0200
+Language:	C++ (C++17)
+Status:	READY
+Result:	ACCEPTED*/
 #include <bits/stdc++.h>
 
 #define ll long long int

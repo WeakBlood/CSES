@@ -1,5 +1,9 @@
 /* 
-@author WeakBlood<3
+Sender:	WeakBlood
+Submission time:	2025-02-15 21:40:28 +0200
+Language:	C++ (C++17)
+Status:	READY
+Result:	ACCEPTED
 */
 #include <bits/stdc++.h>
 

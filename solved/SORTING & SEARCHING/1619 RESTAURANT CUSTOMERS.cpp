@@ -1,6 +1,6 @@
 /* 
 Sender:	WeakBlood
-Submission time:	2025-02-16 11:57:59 +0200
+Submission time:	2025-02-16 12:11:12 +0200
 Language:	C++ (C++17)
 Status:	READY
 Result:	ACCEPTED
@@ -13,11 +13,13 @@ using namespace std;
 
 //!!!EXPLANATION!!!:
 /* 
-For this problem we will need a multiset for storing all the tickets and the upper_bound function which returns the first the first element strictly greater than a certain
-target x, insertions, deletions and upper_bound on multiset are O(logₙ) so each time we have a new customer we search for the first ticket that exceeds their maximum badget,
-if the first one already exceedes it, it means that there are NO solutions and all tickets are above the customer badget, in all other cases, we can go one ticket behind
-and give that to them since it will be the closest to X.
-Time complexity O(N logₙ)
+In this problem, i should have noticed that all the arrival and leaving times are distinct in order to use a shorter solution, 
+So for solving this problem i used a combination of map and vector, since going from 0 to 1e9 and checking each time if something happens is not that efficient, 
+we can just flag with the map the times when SOMETHING happens, and register if it is customer I joining, or customer I leaving, after we process all
+actions of a given time, we can check who's left. There is no need to check the in between time ( the times where nothing happens ) because it 
+will be the same in all of them.
+
+Time complexity: O(N logₙ);
 */
 
 //Cases
@@ -31,28 +33,30 @@ int main(){
     int T;
     T = 1;
     while(T--){
-        int N,Q;
-        cin >> N  >> Q;
+        int ans = 0;
+        int active = 0;
+        map<int,vector<int>> actions;
 
-        multiset<int> tickets;
-        while(N--){
-            int t;
-            cin >> t;
-            tickets.insert(t);
+        int N;
+        cin >> N;
+        for(int i = 1; i <= N; i++){
+            int a,b;
+            cin >> a >> b;
+            actions[a].push_back(i);
+            actions[b].push_back(-i);
+            // -i is for flagging an exit
         }
 
-        while(Q--){
-            int X;
-            cin >> X;
-            auto it = tickets.upper_bound(X);
-            if(tickets.begin() == it){
-                cout << -1 << '\n';
-            } else{
-                it--;
-                cout << *it << '\n';
-                tickets.erase(it);
+        for(auto [t,q]:actions){
+            // t is the time this happens 
+            // q is all the actions that happens
+            for(int u:q){
+                if(u >= 0) active++;
+                else active--;
             }
+            ans = max(active,ans);
         }
+        cout << ans << '\n';
     }
     return 0;
 }

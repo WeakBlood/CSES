@@ -1,5 +1,5 @@
-I actually use a bash script for compiling directly by my shell whatever is called "code.cpp"
-
+# I actually use a bash script for compiling directly by my shell whatever is called "code.cpp"
+# You can just paste this in your ~/.bashrc if you want to execute it in your shell any time. ( UBUNTU BASED )
 bac() {
     local file="code.cpp"
     local output="code"

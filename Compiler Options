@@ -1,1 +1,0 @@
-g++ -DLOCAL -std=c++14 -Wall -Wextra -Wshadow -Wconversion -Wfloat-equal -Wduplicated-cond -Wlogical-op code.cpp -o code.exe

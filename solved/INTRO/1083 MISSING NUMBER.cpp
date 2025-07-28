@@ -1,40 +1,37 @@
-/*
-Sender:	WeakBlood
-Submission time:	2025-02-11 17:05:04 +0200
-Language:	C++ (C++17)
-Status:	READY
-Result:	ACCEPTED
+/* 
+@author WeakBlood<3
 */
 #include <bits/stdc++.h>
-
+ 
 #define ll long long int
 #define inf 1e9
-#define f(a,b,c) for(int i = a; i < b; i+=c)
 using namespace std;
-
+ 
+//!!!EXPLANATION!!!:
+/* 
+ 
+*/
+ 
+//Cases
+ 
 int main(){
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
     #ifdef LOCAL
     ifstream cin("input.txt");
     #endif
-    int T;
-    T = 1;
-    while(T--){
-        int N;
-        cin >> N;
-        vector<int> freq(N+1,false);
-        for(int i = 1; i < N; i++){
-            int a;
-            cin >> a;
-            freq[a]=true;
-        }
-
-        f(1,N+1,1){
-            if(!freq[i]){
-                cout << i << '\n';
-                break;
-            }
+    int N;
+    cin >> N;
+    vector<bool> nums(N+1,false);
+    for(int i = 0; i < N-1; i++){
+        int a;
+        cin >> a;
+        nums[a]=true;
+    }
+    for(int i = 1; i <= N; i++){
+        if(!nums[i]) {
+            cout << i << '\n';
+            return 0;
         }
     }
     return 0;

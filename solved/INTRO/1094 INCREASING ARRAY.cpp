@@ -1,9 +1,5 @@
 /* 
-Sender:	WeakBlood
-Submission time:	2025-02-11 18:20:59 +0200
-Language:	C++ (C++17)
-Status:	READY
-Result:	ACCEPTED
+@author WeakBlood<3
 */
 #include <bits/stdc++.h>
 
@@ -11,27 +7,33 @@ Result:	ACCEPTED
 #define inf 1e9
 using namespace std;
 
+//!!!EXPLANATION!!!:
+/* 
+
+*/
+
+//Cases
+
 int main(){
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
     #ifdef LOCAL
     ifstream cin("input.txt");
     #endif
-    int T = 1;
+    int T;
+    T = 1;
     while(T--){
         int N;
         cin >> N;
+        vector<ll> v(N);
         ll ans = 0;
-        int prev;
-        cin >> prev;
+        cin >> v[0];
         for(int i = 1; i < N; i++){
-            int a; 
-            cin >> a;
-            if(a < prev){
-                ans += (prev-a);
-                a  = a + (prev-a);
+            cin >> v[i];
+            if(v[i] < v[i-1]){
+                ans+=(v[i-1]-v[i]);
+                v[i]=v[i-1];
             }
-            prev = a;
         }
         cout << ans << '\n';
     }
